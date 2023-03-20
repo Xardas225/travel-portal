@@ -56,6 +56,9 @@ body {
     line-height: 24px;
     color: #0d606f;
 }
+input {
+    outline: none;
+}
 .scroll__disable {
     height: 100%;
     overflow-y: hidden;
@@ -265,8 +268,6 @@ body {
 .popup-login__content:not(:first-child){
     padding: 0 3.125vw;
 }
-.popup__content {
-}
 .popup__content-title {
     text-align: center;
     margin: 1.736vw 0 2.083vw 0;
@@ -274,17 +275,14 @@ body {
     font-size: 2.22vw;
     line-height: 38.4px;
 }
-.popup__content-btn {
-}
-.popup__content-btn-fb {
+.popup__content-btn-item {
     position: relative;
-    background: #1877F2;
-    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 1px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.041vw 11.354vw 1.041vw 14.0625vw;
+    padding: 1.041vw 1.354vw 1.041vw 1.0625vw;
     max-width: 560px;
     width: 38.88vw;
     height: 3.75vw;
@@ -292,20 +290,30 @@ body {
     font-weight: 400;
     font-size: 1.38vw;
     line-height: 26.46px;
-    color: #ffffff;
     cursor: pointer;
-    margin-bottom: 1.388vw;
+    margin-bottom: 2.083vw;
 }
-.popup__content-btn-fb::before {
+
+.popup__content-btn-item::before {
     position: absolute;
-    background-image: url(../assets/img/svg/facebook-logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     top: 0.9375vw;
-    left: 11.388vw;
+    left: 1.388vw;
     content: '';
     min-width: 24px;
     width: 1.666vw;
     min-height: 24px;
     height: 1.666vw;
+}
+
+.popup__content-btn-fb {
+    background: #1877F2;
+    border-radius: 10px;
+    color: #ffffff;
+}
+.popup__content-btn-fb::before {
+    background-image: url(../assets/img/svg/facebook-logo.svg);
 }
 @media (max-width: 920px) {
     .popup__content-btn-fb::before {
@@ -316,36 +324,11 @@ body {
     }
 }
 .popup__content-btn-google {
-    position: relative;
     background: #ffffff;
-    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.041vw 11.354vw 1.041vw 14.0625vw;
-    max-width: 560px;
-    width: 38.88vw;
-    max-height: 54px;
-    height: 3.75vw;
-    font-family: 'Red Hat Text';
-    font-weight: 400;
-    font-size: 1.38vw;
-    line-height: 26.46px;
     color: #0d606f;
-    cursor: pointer;
-    margin-bottom: 2.083vw;
 }
 .popup__content-btn-google::before {
-    position: absolute;
     background-image: url(../assets/img/svg/google-logo.svg);
-    top: 0.9375vw;
-    left: 12.291vw;
-    content: '';
-    max-width: 23px;
-    width: 1.597vw;
-    max-height: 24px;
-    height: 1.66vw;
 }
 .popup__content-decor {
     font-weight: 700;
